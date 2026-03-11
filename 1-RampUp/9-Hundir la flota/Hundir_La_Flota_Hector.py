@@ -1,5 +1,5 @@
-#Como hacerlo así va a ser un poco lío, vamos a hacer los pasos 1 a 1 y ya después los meteré en clases y funciones.
-#Comencemos con el tablero. Debería haber 2 versiones de tablero que deberían estar en la misma clase:
+#Si sigo el enunciado me vuelvo loqui, así que vamos a hacerlo paso a paso
+#PASO 1: tableros. Debería haber 2 versiones de tablero que deberían estar en la misma clase:
     #- 1 por cada jugador: el que veo yo y el que ve mi contrincante:
     
 #TABLERO 1: MI TABLERO. Crear un Tablero como una lista de listas de 10x10 que contenga caracteres espacio: " " 
@@ -108,7 +108,7 @@ print(tablero2)
 #PASO 3: turnos
 
 #JUGADOR 1: el jugador 1 juega en el tablero 2. Vamos a meter un ciclo "while" para que la máquina nos pida inputs y vaya imprimiendo hasta que fallemos:
-while tablero1[][] == "B" or tablero2[][] == "B": #aquí hay que poner la condición de que no haya Bs en uno de los tableros
+while "tablero1[][] == "B" or tablero2[][] == "B"": #aquí hay que poner la condición de que no haya Bs al menos en uno de los tableros
     while True: #while 'B' in [item for sublist in tablero1 for item in sublist] or 'B' in [item for sublist in tablero2 for item in sublist]:
         coordenada_i2 = int(input("Tu turno jugador 1. Meta la fila deseada. Valores 0-9:")) #fila (Nº de lista dentro de la lista)
         coordenada_j2 = int(input("Meta la columna deseada. Valores 0-9:")) #columna (Nº de elemento dentro de la lista)
