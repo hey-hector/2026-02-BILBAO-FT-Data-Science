@@ -108,49 +108,51 @@ print(tablero2)
 
 #PASO 3: turnos
 
-#JUGADOR 1: el jugador 1 juega en el tablero 2. Vamos a meter un ciclo "while" para que la máquina nos pida inputs y vaya imprimiendo hasta que fallemos:
-while True:
-    coordenada_i2 = int(input("Tu turno jugador 1. Meta la fila deseada. Valores 0-9:")) #fila (Nº de lista dentro de la lista)
-    coordenada_j2 = int(input("Meta la columna deseada. Valores 0-9:")) #columna (Nº de elemento dentro de la lista)
-    print(coordenada_i2, coordenada_j2) 
-    print(tablero2[coordenada_i2][coordenada_j2]) #este comando print es para que muestre lo que hay en esa posición: si he acertado, que salga "B"; sino, saldrá " "
-    if tablero2[coordenada_i2][coordenada_j2] == "B": 
-        tablero2[coordenada_i2][coordenada_j2] = "x"
-        print("Tocado en", coordenada_i2, coordenada_j2, "¡¡Te toca de nuevo!!")
-        print(tablero2)                        
-    elif tablero2[coordenada_i2][coordenada_j2] == " ":
-        tablero2[coordenada_i2][coordenada_j2] = "o"
-        print("Agua. Sorry :( Turno del jugador 2")
-        print(tablero2)
-        break
-    elif tablero2[coordenada_i2][coordenada_j2] == "o" or tablero2[coordenada_i2][coordenada_j2] == "x":
-        print("Aquí ya has disparado. Try Again Next Time :p Turno del jugador 2")
-        print(tablero2)
-        break       
+#JUGADOR 1: el jugador 1 juega en el tablero 2
+while True: #se crea este bucle infinito para que nos vuelva a tocar cuando el jugador 2 pierda. Sino se acabaría el juego
+    while True: #se crea un ciclo "while" para que la máquina nos pida inputs y vaya imprimiendo hasta que fallemos:
+        coordenada_i2 = int(input("Tu turno jugador 1. Meta la fila deseada. Valores 0-9:")) #fila (Nº de lista dentro de la lista)
+        coordenada_j2 = int(input("Meta la columna deseada. Valores 0-9:")) #columna (Nº de elemento dentro de la lista)
+        print(coordenada_i2, coordenada_j2) 
+        print(tablero2[coordenada_i2][coordenada_j2]) #este comando print es para que muestre lo que hay en esa posición: si he acertado, que salga "B"; sino, saldrá " "
+        if tablero2[coordenada_i2][coordenada_j2] == "B": 
+            tablero2[coordenada_i2][coordenada_j2] = "x"
+            print("Tocado en", coordenada_i2, coordenada_j2, "¡¡Te toca de nuevo!!")
+            print(tablero2)                        
+        elif tablero2[coordenada_i2][coordenada_j2] == " ":
+            tablero2[coordenada_i2][coordenada_j2] = "o"
+            print("Agua. Sorry :( Turno del jugador 2")
+            print(tablero2)
+            break
+        elif tablero2[coordenada_i2][coordenada_j2] == "o" or tablero2[coordenada_i2][coordenada_j2] == "x":
+            print("Aquí ya has disparado. Try Again Next Time :p Turno del jugador 2")
+            print(tablero2)
+            break       
        
-#JUGADOR 2: el jugador 2 juega en el tablero 1. Vamos a meter un ciclo "while" para que la máquina nos pida inputs y vaya imprimiendo hasta que fallemos:
-while True:
-    coordenada_i1 = int(input("Tu turno jugador 2. Meta la fila deseada. Valores 0-9:")) #fila (Nº de lista dentro de la lista)
-    coordenada_j1 = int(input("Meta la columna deseada. Valores 0-9:")) #columna (Nº de elemento dentro de la lista)
-    print(coordenada_i1, coordenada_j1) 
-    print(tablero1[coordenada_i1][coordenada_j1]) #este comando print es para que muestre lo que hay en esa posición: si he acertado, que salga "B"; sino, saldrá " "
-    if tablero1[coordenada_i1][coordenada_j1] == "B": 
-        tablero1[coordenada_i1][coordenada_j1] = "x"
-        print("Tocado en", coordenada_i1, coordenada_j1,"¡¡Te toca de nuevo!!")
-        print(tablero1)
-    elif tablero1[coordenada_i1][coordenada_j1] == " ":
-        tablero1[coordenada_i1][coordenada_j1] = "o"
-        print("Agua. Sorry :( Turno del jugador 1")
-        print(tablero1)
-        break
-    elif tablero1[coordenada_i1][coordenada_j1] == "o" or tablero1[coordenada_i1][coordenada_j1] == "x":
-        print("Aquí ya has disparado. Try Again Next Time :p Turno del jugador 1")
-        print(tablero1)
-        break
+#JUGADOR 2: el jugador 2 juega en el tablero 1
+    while True: #se crea un ciclo "while" para que la máquina nos pida inputs y vaya imprimiendo hasta que fallemos:
+        coordenada_i1 = int(input("Tu turno jugador 2. Meta la fila deseada. Valores 0-9:")) #fila (Nº de lista dentro de la lista)
+        coordenada_j1 = int(input("Meta la columna deseada. Valores 0-9:")) #columna (Nº de elemento dentro de la lista)
+        print(coordenada_i1, coordenada_j1) 
+        print(tablero1[coordenada_i1][coordenada_j1]) #este comando print es para que muestre lo que hay en esa posición: si he acertado, que salga "B"; sino, saldrá " "
+        if tablero1[coordenada_i1][coordenada_j1] == "B": 
+            tablero1[coordenada_i1][coordenada_j1] = "x"
+            print("Tocado en", coordenada_i1, coordenada_j1,"¡¡Te toca de nuevo!!")
+            print(tablero1)
+        elif tablero1[coordenada_i1][coordenada_j1] == " ":
+            tablero1[coordenada_i1][coordenada_j1] = "o"
+            print("Agua. Sorry :( Turno del jugador 1")
+            print(tablero1)
+            break
+        elif tablero1[coordenada_i1][coordenada_j1] == "o" or tablero1[coordenada_i1][coordenada_j1] == "x":
+            print("Aquí ya has disparado. Try Again Next Time :p Turno del jugador 1")
+            print(tablero1)
+            break
     
 #MEJORAS: 
 # - Meterlo en un class e ir definiendo las funciones para llamar esas funciones desde los archivos .py
 # - Poner los tableros bonitos y que se impriman como una tablero real (con sus filas y columnas), no como listas
 # - Elegir los barcos de manera aleatoria
+# - Que no de error cada vez que no meta en los inputs de coordenadas un valor entre 0 y 9
 # - Meter los turnos en un bucle para que no se juegue de manera infinita
 # - Hacer que la máquina sea el jugador 2 y dispare de manera aleatoria
