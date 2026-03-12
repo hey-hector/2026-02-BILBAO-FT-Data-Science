@@ -12,7 +12,7 @@ for i in range(10):
         fila.append(" ") #para cada columna (y en consecuencia, cada fila) se le añade el espacio - ¿al final de la lista?
     tablero1.append(fila) #a la lista vacía 'tablero1', se le añade el bucle entero al final
 
-print(tablero1)
+#print(tablero1) - prueba
     
 #Así tenemos la lista "tablero1" de 10 filas y 1o columnas (10 listas con 10 elementos) con espacios en blanco
 
@@ -25,7 +25,7 @@ for i in range(10):
         fila.append(" ") #para cada columna (y en consecuencia, cada fila) se le añade el espacio - ¿al final de la lista?
     tablero2.append(fila) #a la lista vacía 'tablero2', se le añade el bucle entero al final
 
-print(tablero2)
+#print(tablero2) - prueba
 
 #Así tenemos las listas "tablero1" y "tablero2" de 10 filas y 1o columnas (10 listas con 10 elementos) con espacios en blanco
 
@@ -69,7 +69,7 @@ tablero1[9][9] = "B"
 #Barco_4 4 posiciones:
 tablero1[6][4] = "B"
 #Esto significa que la coordenada_i es la lista en la que está el elemento y la coordenada_j será la posición dentro de esa lista
-print(tablero1)
+#print(tablero1) - prueba
 
 #TABLERO 2: esto  lo tiene que rellenar la máquina. Pero vamos a imaginar que yo soy la máquina también, ¿quién sino?
 # Al final lo hacemos tablero[coordenada_i][coordenada_j]:
@@ -104,7 +104,7 @@ tablero2[6][9] = "B"
 #Barco_4 4 posiciones:
 tablero2[4][6] = "B"
 #Esto significa que la coordenada_i es la lista en la que está el elemento y la coordenada_j será la posición dentro de esa lista
-print(tablero2)
+#print(tablero2) - prueba
 
 #PASO 3: turnos
 
