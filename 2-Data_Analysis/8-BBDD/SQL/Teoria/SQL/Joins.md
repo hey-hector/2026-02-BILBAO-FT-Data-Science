@@ -124,7 +124,7 @@ FROM table1
 -- Get all orders and all customers, combined.
 SELECT Orders.OrderID, Customers.CompanyName, Orders.OrderDate
 FROM Orders
-	FULL OUTER JOIN Customers ON Customers.CustomerID = Orders.OrderID
+	FULL OUTER JOIN Customers ON Customers.CustomerID = Orders.CustomerID
 ORDER BY Customers.CompanyName;
 ```
 
